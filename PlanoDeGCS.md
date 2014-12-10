@@ -74,6 +74,34 @@ _As questões envolvidas na configuração do ambiente de CM incluem:_
 ----------------------------------
 _[Descreva como os artefatos do projeto ou produto devem ser nomeados, marcados e numerados. O esquema de identificação deve abranger o hardware, o software do sistema, os produtos de terceiros (COTS) e todos os artefatos de desenvolvimento de aplicativos listados na estrutura de diretórios do produto; por exemplo, planos, modelos, componentes, software de teste, resultados e dados, executáveis e assim por diante.]_
 
+
+Todos os documentos disponibilizados no repositório devem ser identificados baseados na seguinte nomenclatura:
+
+<ID_ARTEFATO> - <NOME_ARTEFATO>
+
+Onde:
+
+•	<ID_ARTEFATO> é a sigla de identificação do artefato conforme Tabela 6.
+•	<NOME_ARTEFATO> é nome de identificação do artefato conforme Tabela 6.
+
+ID_ARTEFATO	NOME_ARTEFATO
+APD 	Ativação de Projeto de Desenvolvimento
+EOR 	Especificação de Objetivos e Requisitos
+LPS 	Levantamento Preliminar do Software
+PCP 	Plano de Comunicação do Projeto
+PDS 	Plano de Desenvolvimento de Software
+PGC 	Plano de Gerência de Configuração
+PGQ 	Plano de Gerência da Qualidade
+PGR 	Plano de Gerência de Riscos
+RAC 	Relatório de Avaliação do Cliente
+RAP 	Relatório de Acompanhamento do Projeto
+PFM	Pedido Formal de Modificação
+SAI 	Solicitação de Análise de Impacto
+RTF 	Relatório de RTF (Revisão Técnica Formal)
+DAS	Documento de Análise de Software
+DPS	Documento de Projeto de Software
+
+
 ### 3.1.2 Itens de Configuração
 _[Relacionar os artefatos ou grupos de artefatos, separando por tipo, modulo ou subsistema, responsável ou momento em que deverão ser incluídos em baselines._
 * _“Inclusão em Baseline” em branco significa que o grupo de artefatos não participará de baseline. Pode ser expresso como uma data ou identificador de uma baseline, fase ou ponto de controle_
