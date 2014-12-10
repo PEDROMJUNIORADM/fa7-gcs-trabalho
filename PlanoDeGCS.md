@@ -84,6 +84,20 @@ _[Relacionar os artefatos ou grupos de artefatos, separando por tipo, modulo ou 
 |_&lt;grupo de itens de configuração&gt;_|_&lt;nome do responsável&gt;_|_&lt;momento a partir do qual o conjunto de artefatos será incluído em baseline&gt;_|
 
 
+Um projeto de desenvolvimento de software produz os seguintes itens:
+
+-Programas (código fonte, programas executáveis, bibliotecas de
+componentes,  etc.);
+- Documentação (manuais do usuário, documento de requisitos, modelo
+de análise e projeto, etc.);
+- Massas de dados (dados de teste e do projeto em geral).
+
+Um item de configuração está sujeito a mudanças e essas devem obedecer às políticas
+estabelecidas. Normalmente, um item de configuração é estabelecido para cada
+pedaço de software que pode ser projetado, implementado e testado de forma Plano de Gerenciamento de Configuração independente. Documentos e massas de dados, entretanto, também são passíveis de ser considerados itens de configuração.
+
+
+
 ### 3.1.3 Baselines do Projeto
 
 A criação de baselines pode ser realizada de acordo com os marcos do projeto ou de alguma outra forma definida pela gerência A baseline é armazenada em um repositório de itens de configuração. E, a partir desse momento, só pode ser alterado por meio de uma solicitação de alteração formal para controle de mudança.
