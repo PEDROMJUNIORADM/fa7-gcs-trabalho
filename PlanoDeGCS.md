@@ -97,9 +97,9 @@ _[Descreva a organização de diretórios do seu repositório e que itens/arquiv
 --------------------------------------
 
 ### 3.2.1 Processamento e Aprovação de Solicitações de Mudança
-    Para todas as mudanças,  o cadastro e controle serão realizados na Ferramenta de
+Para todas as mudanças,  o cadastro e controle serão realizados na Ferramenta de
 Gestão de Projetos.
-    As liberações dos artefatos só acontecerão após a aprovação do Comitê de Avaliação 
+As liberações dos artefatos só acontecerão após a aprovação do Comitê de Avaliação 
 de Mudança nos registros realizados na Ferramenta de Gestão de Projetos.
 
 
