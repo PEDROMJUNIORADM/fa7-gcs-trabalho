@@ -86,9 +86,27 @@ _[Relacionar os artefatos ou grupos de artefatos, separando por tipo, modulo ou 
 
 ### 3.1.3 Baselines do Projeto
 
-_[As baselines funcionam como um padrão oficial no qual os trabalhos subseqüentes são baseados. Somente mudanças autorizadas podem ser efetuadas nas baselines._
-_Descreva em que pontos do ciclo de vida do projeto ou produto as baselines devem ser estabelecidas. As baselines mais comuns devem ser definidas ao final de cada uma das fases de Iniciação, Elaboração, Construção e Transição. Elas também podem ser geradas no final de iterações ocorridas dentro das várias fases ou com freqüência ainda maior._
-_Descreva quem autoriza uma baseline e o que ela contém.]_
+A criação de baselines pode ser realizada de acordo com os marcos do projeto ou de alguma outra forma definida pela gerência A baseline é armazenada em um repositório de itens de configuração. E, a partir desse momento, só pode ser alterado por meio de uma solicitação de alteração formal para controle de mudança.
+Para cada uma das fases do modelo sugere-se a criação de baselines nos seguintes marcos:                                     
+•	Fase Prospecção                                                                                                            
+o	Solicitação de uma proposta pelo cliente                                                                                   
+•	Fase Concepção                                                                                                             
+o	Após a atividade do ciclo de desenvolvimento: Conduzir revisão do Estudo de Viabilidade do Projeto                         
+•	Fase Negociação                                                                                                            
+o	Após a atividade do ciclo de desenvolvimento: Conduzir revisão do Contrato                                                 
+•	Fase Elaboração                                                                                                            
+o	Após a atividade do ciclo de desenvolvimento: Conduzir revisão do Arquitetura do Software                                  
+•	Fase Construção                                                                                                            
+o	Após a atividade do ciclo de desenvolvimento: Conduzir revisão do Capacidade Operacional                                   
+•	Fase Transição                                                                                                             
+o	Após a atividade do ciclo de desenvolvimento: Conduzir revisão do Entrega do Produto                                       
+
+
+A identificação da baseline pode ser constituída por:
+“Baseline” + “_” + ID do Projeto + “_” + (numeração sequencial iniciada por 0001)
+Sendo que:
+o	Os identificadores dos projetos (ID do Projeto) devem ser únicos na empresa, ou seja, nenhum projeto poderá apresentar o mesmo identificador. Sugere-se que o identificador seja composto pela sigla do projeto composta de 3 a 5 letras em maiúsculo.
+
 
 ### 3.1.4 Estrutura do Repositório de Versões
 _[Descreva a organização de diretórios do seu repositório e que itens/arquivos devem ser armazenados em cada diretório.]_
