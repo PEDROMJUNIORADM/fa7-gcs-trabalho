@@ -104,7 +104,7 @@ de Mudança nos registros realizados na Ferramenta de Gestão de Projetos.
 
 
 ### 3.2.2 Comitê de Controle de Mudança (CCB)
-_[Descreva a participação e os procedimentos para processar solicitações e aprovações de mudança a serem seguidos pelo CCB. Informe quem são os membros do CCB e suas responsabilidades.]_
+A Comissão de Controle de Mudanças  será formada pelo Líder de Projeto, integrantes da Equipe de Qualidade e integrantes da Equipe Técnica.
 
 
 
