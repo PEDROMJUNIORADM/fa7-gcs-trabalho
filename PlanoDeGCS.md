@@ -108,6 +108,32 @@ _[Descreva a participação e os procedimentos para processar solicitações e a
 ==========================
 _[Descreva os padrões e procedimentos que devem ser seguidos no projeto. Crie subseções se achar necessário, para organizá-los melhor.]_
 
+Esse seção vai documentar os padrões usados na criação de branch's, Tag's, Commit's e no versionamento do projeto. Também será documentado o procedimento para a solicitação de mudança.
+
+###4.1 Padrões
+
+######4.1.1 Branch
+
+Para a criação de novos branch's deve ser adotado o seguinte padrão:
+"BUG"-<ID DO BUG>
+
+onde o <ID DO BUG> é o número do bug guardado no sistema de solicitação -> Motivo Bug
+
+######4.1.2 Commit
+
+Para executar um commit é preciso seguir a seguinte padrão:
+<BRANCH><VERSÃO DO SISTEMA><ID DO REQUISITO IMPLEMENTADO><COMENTARIO>
+
+onde o <BRANCH> identifica o branch, <VERSÃO DO SISTEMA> identidica a versão do sistema que esta sendo modificada, <ID DO REQUISITO IMPLEMENTADO> que mostra qual a funcionalidadeesta sendo implementada segundo o documento de requisitos e um comentário do commit
+
+######4.1.2 Tag
+
+Para a criação de uma tag deverá seguir o seguinte padrão:
+ v XX.YY.ZZ e sempre usar o atributo -m para comentar.
+
+ A 1ª e 2ª posições (XX) indicam o primeiro bloco da identificação da versão, e será modificado quando ocorrer a inclusão de um conjunto de novas funcionalidades homologadas pelo cliente.
+- A 3ª e 4ª posições (YY) indicam o segundo bloco da indicação da versão e será modificado quando ocorrer alteração em funcionalidades existentes. 
+- A 5ª e 6ª posições (ZZ) indicam o último bloco da identificação da versão e será modificado na correção de um erro em qualquer funcionalidade. 
 
 
 5. Treinamento e Recursos
