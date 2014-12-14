@@ -123,8 +123,24 @@ _[Descreva os padrões e procedimentos que devem ser seguidos no projeto. Crie s
 
 5. Treinamento e Recursos
 =========================
-_[Descreva as ferramentas de software, o pessoal e o treinamento necessários para implementar as atividades de CM especificadas.]_
 
+Um breve descrição de todas as ferramentas utilizadas do projeto:
+Git é um sistema de controle de versão distribuído.
+Bugzilla é uma ferramenta baseada em Web e e-mail que dá suporte ao desenvolvimento de projetos, rastreando defeitos e servindo também como plataforma para pedidos de requisitos.
+CruiseControl é um ferramenta de integração continua e um extenso framework para criação e controle do processo de compilação continua.
+Eclipse é a IDE de desenvolvimento.
+Sonar é uma plataforma para melhorar a qualidade do software.
+Maven é uma ferramenta de automação de compilação utilizada primariamente em projetos Java.
+
+Com o objetivo de capacitar todos os participantes do projeto será feito um treinamento das ferramentas utilizadas. 
+
+GIT avançado: Victor
+GIT intermediário: Diego, Luiz, Yanko
+Bugzilla: Todos
+CruiseControl: Yanko, Luiz
+Sonar: Todos
+Maven: Todos
+IDE Eclipse: Diego, Luiz, Yanko
 
 
 6. Auditorias de Configuração
