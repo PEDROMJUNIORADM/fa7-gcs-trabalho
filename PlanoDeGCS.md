@@ -145,3 +145,5 @@ _[Descreva as ferramentas de software, o pessoal e o treinamento necessários pa
 6. Auditorias de Configuração
 =============================
 _[Descreva o cronograma das auditorias de configuração e o que será verificado. Informe também como serão reportados os problemas encontrados e onde sera feito o acompanhamento dos itens corretivos.]_
+
+A verificação deve ocorrer a cada fim de interação e caso haja algum itens em desacordo com os padrões definidos no PGC serão reportados ao responsável para correção imediata.
