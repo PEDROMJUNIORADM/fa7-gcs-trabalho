@@ -11,10 +11,10 @@ Histórico de Versões
 |Data                |Versão       |Descrição               |Autor          |
 |--------------------|-------------|------------------------|---------------|
 |_&lt;08/12/2014&gt;_|_&lt;1.0&gt;_|_&lt;Versão inicial&gt;_|_&lt;Victor&gt;_|
-|_&lt;14/12/2014&gt;_|_&lt;1.1&gt;_|_&lt;Sessão 6 e 4&gt;_|_&lt;Yanko&gt;_|
-|_&lt;14/12/2014&gt;_|_&lt;1.2&gt;_|_&lt;Sessão 3&gt;_|_&lt;Diego&gt;_|
-|_&lt;12/12/2014&gt;_|_&lt;1.3&gt;_|_&lt;Sessão 2 e 5&gt;_|_&lt;Luiz&gt;_|
-|_&lt;12/12/2014&gt;_|_&lt;1.4&gt;_|_&lt;Descrição do documento&gt;_|_&lt;Victor&gt;_|
+|_&lt;12/12/2014&gt;_|_&lt;1.1&gt;_|_&lt;Descrição do documento&gt;_|_&lt;Victor&gt;_|
+|_&lt;12/12/2014&gt;_|_&lt;1.2&gt;_|_&lt;Sessão 2 e 5&gt;_|_&lt;Luiz&gt;_|
+|_&lt;14/12/2014&gt;_|_&lt;1.3&gt;_|_&lt;Sessão 6 e 4&gt;_|_&lt;Yanko&gt;_|
+|_&lt;14/12/2014&gt;_|_&lt;1.4&gt;_|_&lt;Sessão 3&gt;_|_&lt;Diego&gt;_|
 |_&lt;15/12/2014&gt;_|_&lt;1.5&gt;_|_&lt;Correções e integração&gt;_|_&lt;Victor e Luiz&gt;_|
 
 
@@ -40,6 +40,10 @@ Este documento descreve toda a infra-estrutura utilizada durante o desenvolvimen
 |----------|----------------------------------------------|
 | Baseline | Um marco de uma versão, consolidada e estável, servindo de base para trabalhos futuros. |
 | CCB      | Comitê de controle de mudanças. |
+| CM      | Gerência de configuração. |
+| UML      | Linguagem de Modelagem Unificada. |
+| PGC      | Plano de Gerenciamento de Configuração. |
+| IDE      | Ambiente integrado de desenvolvimento. |
 
 1.4 Referências
 ---------------
@@ -103,13 +107,14 @@ Onde:
 •	ID ARTEFATO é a sigla de identificação do artefato conforme lista abaixo
 •	NOME ARTEFATO é nome de identificação do artefato conforme lista abaixo.
 
-ID ARTEFATO    	|  NOME ARTEFATO          
-BC                 bibliotecas de componentes      
-MU                 manuais do usuário     
-CF                 código fonte           
-PE                 programas executáveis  
-DR                 documento de requisitos
-MAP                modelo de análise e projeto     
+| ID ARTEFATO | NOME ARTEFATO |
+|-------------|---------------|
+| BC          |       bibliotecas de componentes  |
+| MU          |       manuais do usuário  |
+| CF          |       código fonte  |  
+| PE          |       programas executáveis  |
+| DR          |       documento de requisitos |
+| MAP         |       modelo de análise e projeto     |
 
 ### 3.1.2 Itens de Configuração
 
@@ -184,17 +189,14 @@ Esse seção vai documentar os padrões usados na criação de branch's, Tag's, 
 
 ######4.1.1 Branch
 
-Para a criação de novos branch's deve ser adotado o seguinte padrão:
-"BUG"-<ID DO BUG>
-
-Onde o <ID DO BUG> é o número do bug guardado no sistema de solicitação -> Motivo Bug
+Para a criação de novos branch's deve ser adotado a definição conforme ao item 3.1.4 (Git Flow)
 
 ######4.1.2 Commit
 
-Para executar um commit é preciso seguir a seguinte padrão:
-<BRANCH><VERSÃO DO SISTEMA><ID DO REQUISITO IMPLEMENTADO><COMENTARIO>
+Para executar um commit é preciso seguir a seguinte padrão:  
+&lt;BRANCH&gt;&lt;VERSÃO DO SISTEMA&gt;&lt;ID DO REQUISITO IMPLEMENTADO&gt;&lt;COMENTARIO&gt;
 
-Onde o <BRANCH> identifica o branch, <VERSÃO DO SISTEMA> identidica a versão do sistema que esta sendo modificada, <ID DO REQUISITO IMPLEMENTADO> que mostra qual a funcionalidadeesta sendo implementada segundo o documento de requisitos e um comentário do commit
+Onde o &lt;BRANCH&gt; identifica o branch, &lt;VERSÃO DO SISTEMA&gt; identidica a versão do sistema que esta sendo modificada, &lt;ID DO REQUISITO IMPLEMENTADO&gt; que mostra qual a funcionalidadeesta sendo implementada segundo o documento de requisitos e um comentário do commit
 
 ######4.1.2 Tag
 
@@ -220,7 +222,7 @@ Um breve descrição de todas as ferramentas utilizadas do projeto:
 
 Com o objetivo de capacitar todos os participantes do projeto será feito um treinamento das ferramentas utilizadas. 
 
-Microsoft Project: Victor
+Microsoft Project: Victor  
 GIT avançado: Yanko  
 GIT intermediário: Diego, Luiz, Victor  
 Bugzilla: Todos  
