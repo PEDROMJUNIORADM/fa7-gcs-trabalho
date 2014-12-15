@@ -32,19 +32,22 @@ Este documento descreve toda a infra-estrutura utilizada durante o desenvolvimen
 
 1.3 Definições, Acrônimos e Abreviações
 ---------------------------------------
-|Termo     |Significado                                   |
+|Termo     |Significado |
 |----------|----------------------------------------------|
 | Baseline | Um marco de uma versão, consolidada e estável, servindo de base para trabalhos futuros. |
+| CCB      | Comitê de controle de mudanças. |
 
 1.4 Referências
 ---------------
 _[Esta subseção apresenta uma lista completa de todos os documentos mencionados no Plano de Gerenciamento de Configuração. Identifique os documentos por título, número de relatório (se aplicável), data e organização responsável pela publicação. Especifique as fontes a partir das quais as referências podem ser obtidas. Essas informações podem ser fornecidas por um anexo ou outro documento.]_
 
+Branching model: http://nvie.com/posts/a-successful-git-branching-model/
+
 1.5 Visão Geral
 ---------------
 ###### Organização do documento:
  
-|Sessão     |Descrição                                   |
+|Sessão     |Descrição |
 |-----------|--------------------------------------------|
 | 2.1       | Descrição de quem será o responsável pela execução das diversas atividades de Gerenciamento de Configuração (CM) descritas no Processo de CM |
 | 2.2       | Descrição do ambiente de computação e as ferramentas de software a serem utilizadas para desempenhar as funções de CM em todo o ciclo de vida do projeto ou produto e as ferramentas e procedimentos necessários para o ciclo de vida do produto. |
@@ -70,11 +73,11 @@ _[Esta subseção apresenta uma lista completa de todos os documentos mencionado
 ------------------------------------------------
 _[Descreva quem será o responsável pela execução das diversas atividades de Gerenciamento de Configuração (CM) descritas no Processo de CM.]_
 
-Gestor de configuração do projeto: Victor 
-Gestor de ferramentas de Gerência de configuração: Yanko
-Gestor de Configuração de Software: Victor, Yanko, Diego
-Auditor de Configuração de Software: Luiz
-Desenvolvedor: Diego, Luiz, Yanko
+Gestor de configuração do projeto: Victor  
+Gestor de ferramentas de Gerência de configuração: Yanko  
+Gestor de Configuração de Software: Victor, Yanko, Diego  
+Auditor de Configuração de Software: Luiz  
+Desenvolvedor: Diego, Luiz, Yanko  
 
 2.2 Ferramentas, Ambiente e Infra-estrutura
 -------------------------------------------
@@ -86,7 +89,7 @@ _As questões envolvidas na configuração do ambiente de CM incluem:_
 * _localização física dos servidores e clientes]_
 
 Será usado como ferramenta de versionamento o GIT, uma ferramenta distribuida, então cada participante do projeto terá em sua estação de trabalho um repositório. Para facilitar a gerencia será desiginada uma máquina onde terá a última versão estável.
-Para o 'pull' dessa máquina de controle (máquina da última versão estável) deve ser feito só após passar pela ferramenta de integração continua (CruiseControl).
+Para o 'pull' dessa máquina de controle (máquina da última versão estável) deve ser feito só após passar pela ferramenta de integração continua (CruiseControl).  
 Cada máquina dos desenvolvedores deve ter instalado a mesma versão do Eclipse (Luna SR1) e a mesma versão do plugin EGit (3.4.1).
 O projeto deve está configurado para uso da ferramenta de inspeção continua SONAR.
 A ferramenta utilizada para auxiliar as mudanças será Bugzilla. 
@@ -100,48 +103,52 @@ A ferramenta utilizada para auxiliar as mudanças será Bugzilla.
 ### 3.1.1 Métodos de Identificação
 ----------------------------------
 Todos os documentos disponibilizados no repositório devem ser identificados baseados na seguinte nomenclatura:               
-ID ARTEFATO-NOME ARTEFATO                                                                                                    
-Onde:                                                                                                                        
-•	ID ARTEFATO é a sigla de identificação do artefato conforme lista abaixo                                                 
-•	NOME ARTEFATO é nome de identificação do artefato conforme lista abaixo.                                                 
+ID ARTEFATO-NOME ARTEFATO  
+Onde:             
+•	ID ARTEFATO é a sigla de identificação do artefato conforme lista abaixo
+•	NOME ARTEFATO é nome de identificação do artefato conforme lista abaixo.
 
-ID ARTEFATO    	|  NOME ARTEFATO                                                                                             
-BC                 bibliotecas de componentes                                                                                
-MU                 manuais do usuário                                                                                        
-CF                 código fonte                                                                                              
-PE                 programas executáveis                                                                                     
-DR                 documento de requisitos                                                                                   
-MAP                modelo de análise e projeto                                                                               
+ID ARTEFATO    	|  NOME ARTEFATO          
+BC                 bibliotecas de componentes      
+MU                 manuais do usuário     
+CF                 código fonte           
+PE                 programas executáveis  
+DR                 documento de requisitos
+MAP                modelo de análise e projeto     
 
 ### 3.1.2 Itens de Configuração
-Um projeto de desenvolvimento de software produz os seguintes itens:
+Um projeto de desenvolvimento de software produz os seguintes itens:  
 
--Programas (código fonte, programas executáveis, bibliotecas de componentes,  etc.)                                          
--Documentação (manuais do usuário, documento de requisitos, modelode análise e projeto, etc.)                                
--Massas de dados (dados de teste e do projeto em geral).                                                                     
+- Programas (código fonte, programas executáveis, bibliotecas de componentes,  etc.)  
+- Documentação (manuais do usuário, documento de requisitos, modelo de análise e projeto, etc.)  
+- Massas de dados (dados de teste e do projeto em geral).  
 
-Um item de configuração está sujeito a mudanças e essas devem obedecer às políticas
-estabelecidas. Normalmente, um item de configuração é estabelecido para cada
-pedaço de software que pode ser projetado, implementado e testado de forma Plano de Gerenciamento de Configuração independente. Documentos e massas de dados, entretanto, também são passíveis de ser considerados itens de configuração.
-
+Um item de configuração está sujeito a mudanças e essas devem obedecer às políticas  
+estabelecidas. Normalmente, um item de configuração é estabelecido para cada  
+pedaço de software que pode ser projetado, implementado e testado de forma Plano de Gerenciamento de Configuração independente. Documentos e massas de dados, entretanto, também são passíveis de ser considerados itens de configuração.  
 
 
 ### 3.1.3 Baselines do Projeto
 
-A criação de baselines pode ser realizada de acordo com os marcos do projeto ou de alguma outra forma definida pela gerência A baseline é armazenada em um repositório de itens de configuração. E, a partir desse momento, só pode ser alterado por meio de uma solicitação de alteração formal para controle de mudança.
-Para cada uma das fases do modelo sugere-se a criação de baselines nos seguintes marcos:                                     
-•	Fase Prospecção                                                                                                            
-o	Solicitação de uma proposta pelo cliente                                                                                   
-•	Fase Concepção                                                                                                             
-o	Após a atividade do ciclo de desenvolvimento: Conduzir revisão do Estudo de Viabilidade do Projeto                         
-•	Fase Negociação                                                                                                            
-o	Após a atividade do ciclo de desenvolvimento: Conduzir revisão do Contrato                                                 
-•	Fase Elaboração                                                                                                            
-o	Após a atividade do ciclo de desenvolvimento: Conduzir revisão do Arquitetura do Software                                  
-•	Fase Construção                                                                                                            
-o	Após a atividade do ciclo de desenvolvimento: Conduzir revisão do Capacidade Operacional                                   
-•	Fase Transição                                                                                                             
-o	Após a atividade do ciclo de desenvolvimento: Conduzir revisão do Entrega do Produto                                       
+A criação de baselines pode ser realizada de acordo com os marcos do projeto ou de alguma outra forma definida pela gerência. A baseline é armazenada em um repositório de itens de configuração. E, a partir desse momento, só pode ser alterado por meio de uma solicitação de alteração formal para controle de mudança.
+Para cada uma das fases do modelo sugere-se a criação de baselines nos seguintes marcos:
+
+- Fase Prospecção: Solicitação de uma proposta pelo cliente
+- Fase Concepção: Conduzir revisão do Estudo de Viabilidade do Projeto
+-	Fase Negociação: Conduzir revisão do Contrato
+-	Fase Elaboração: Conduzir revisão do Arquitetura do Software
+- Fase Construção: Conduzir revisão da Capacidade Operacional
+-	Fase Transição: Conduzir revisão do Entrega do Produto
+
+
+| Responsável | Baseline                       | Conteúdo                     |
+|-------------|--------------------------------|------------------------------|
+| Victor      | Baseline da fase de Prospecção | Termo de abertura do projeto            |
+| Victor      | Baseline da fase de Consepção  | Cronogramas, Doc. Requisitos, Orçamento |
+| Victor      | Baseline da fase de Negociação | Contratos |
+| Victor      | Baseline da fase de Elaboração | Diagramas da UML. |
+| Victor      | Baseline da fase de Contrução  | Código fonte, Suites de testes, relatórios de atividades  |
+| Victor      | Baseline da fase de Transição  | Manuais, Doc. de Aceite |
 
 
 A identificação da baseline pode ser constituída por:
@@ -151,7 +158,14 @@ o	Os identificadores dos projetos (ID do Projeto) devem ser únicos na empresa, 
 
 
 ### 3.1.4 Estrutura do Repositório de Versões
-_[Descreva a organização de diretórios do seu repositório e que itens/arquivos devem ser armazenados em cada diretório.]_
+O repositório de versões são definidos três branches principais: master, stage e develop.
+
+O branch 'master' é o ramo principal, onde terá as versões estáveis e testadas.
+O branch 'stage' é o ramo de estágio intermediário, onde o código é testado em um ambiente idêntico ao de produção.
+O branch 'develop' é o ramo onde terá todas as mudanças realizadas que farão parte de uma release. Deste brach 'develop' irão surgir vários outros branchs, e estes serão responsáveis por novas funcionalidades.
+Os branchs de correções urgentes ('hotfix') são reparos realizados diretamente na versão que está em produção ('master').
+
+![alt text](http://www.twistsystems.com/media/cms_page_media/2013/1/14/gitflow-model.png "Git flow")
 
 3.2 Controle de Configuração e Mudança
 --------------------------------------
@@ -181,21 +195,21 @@ Esse seção vai documentar os padrões usados na criação de branch's, Tag's, 
 Para a criação de novos branch's deve ser adotado o seguinte padrão:
 "BUG"-<ID DO BUG>
 
-onde o <ID DO BUG> é o número do bug guardado no sistema de solicitação -> Motivo Bug
+Onde o <ID DO BUG> é o número do bug guardado no sistema de solicitação -> Motivo Bug
 
 ######4.1.2 Commit
 
 Para executar um commit é preciso seguir a seguinte padrão:
 <BRANCH><VERSÃO DO SISTEMA><ID DO REQUISITO IMPLEMENTADO><COMENTARIO>
 
-onde o <BRANCH> identifica o branch, <VERSÃO DO SISTEMA> identidica a versão do sistema que esta sendo modificada, <ID DO REQUISITO IMPLEMENTADO> que mostra qual a funcionalidadeesta sendo implementada segundo o documento de requisitos e um comentário do commit
+Onde o <BRANCH> identifica o branch, <VERSÃO DO SISTEMA> identidica a versão do sistema que esta sendo modificada, <ID DO REQUISITO IMPLEMENTADO> que mostra qual a funcionalidadeesta sendo implementada segundo o documento de requisitos e um comentário do commit
 
 ######4.1.2 Tag
 
 Para a criação de uma tag deverá seguir o seguinte padrão:
  v XX.YY.ZZ e sempre usar o atributo -m para comentar.
 
- A 1ª e 2ª posições (XX) indicam o primeiro bloco da identificação da versão, e será modificado quando ocorrer a inclusão de um conjunto de novas funcionalidades homologadas pelo cliente.
+- A 1ª e 2ª posições (XX) indicam o primeiro bloco da identificação da versão, e será modificado quando ocorrer a inclusão de um conjunto de novas funcionalidades homologadas pelo cliente.
 - A 3ª e 4ª posições (YY) indicam o segundo bloco da indicação da versão e será modificado quando ocorrer alteração em funcionalidades existentes. 
 - A 5ª e 6ª posições (ZZ) indicam o último bloco da identificação da versão e será modificado na correção de um erro em qualquer funcionalidade. 
 
@@ -204,22 +218,23 @@ Para a criação de uma tag deverá seguir o seguinte padrão:
 =========================
 
 Um breve descrição de todas as ferramentas utilizadas do projeto:
-Git é um sistema de controle de versão distribuído.
-Bugzilla é uma ferramenta baseada em Web e e-mail que dá suporte ao desenvolvimento de projetos, rastreando defeitos e servindo também como plataforma para pedidos de requisitos.
-CruiseControl é um ferramenta de integração continua e um extenso framework para criação e controle do processo de compilação continua.
-Eclipse é a IDE de desenvolvimento.
-Sonar é uma plataforma para melhorar a qualidade do software.
-Maven é uma ferramenta de automação de compilação utilizada primariamente em projetos Java.
+
+- Git é um sistema de controle de versão distribuído.
+- Bugzilla é uma ferramenta baseada em Web e e-mail que dá suporte ao desenvolvimento de projetos, rastreando defeitos e servindo também como plataforma para pedidos de requisitos.
+- CruiseControl é um ferramenta de integração continua e um extenso framework para criação e controle do processo de compilação continua.
+- Eclipse é a IDE de desenvolvimento.
+- Sonar é uma plataforma para melhorar a qualidade do software.
+- Maven é uma ferramenta de automação de compilação utilizada primariamente em projetos Java.
 
 Com o objetivo de capacitar todos os participantes do projeto será feito um treinamento das ferramentas utilizadas. 
 
-GIT avançado: Victor
-GIT intermediário: Diego, Luiz, Yanko
-Bugzilla: Todos
-CruiseControl: Yanko, Luiz
-Sonar: Todos
-Maven: Todos
-IDE Eclipse: Diego, Luiz, Yanko
+GIT avançado: Victor  
+GIT intermediário: Diego, Luiz, Yanko  
+Bugzilla: Todos  
+CruiseControl: Yanko, Luiz  
+Sonar: Todos  
+Maven: Todos  
+IDE Eclipse: Diego, Luiz, Yanko  
 
 
 6. Auditorias de Configuração
