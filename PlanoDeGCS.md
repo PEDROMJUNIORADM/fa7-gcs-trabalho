@@ -2,7 +2,7 @@ Aluguel de livros
 =================
 Plano de Gerenciamento de Configuração
 ======================================
-Versão &lt;1.0&gt;
+Versão &lt;1.5&gt;
 ------------------
 
 Histórico de Versões
@@ -10,8 +10,12 @@ Histórico de Versões
 
 |Data                |Versão       |Descrição               |Autor          |
 |--------------------|-------------|------------------------|---------------|
-|_&lt;12/12/2014&gt;_|_&lt;1.0&gt;_|_&lt;Versão inicial&gt;_|_&lt;Victor&gt;_|
-
+|_&lt;08/12/2014&gt;_|_&lt;1.0&gt;_|_&lt;Versão inicial&gt;_|_&lt;Victor&gt;_|
+|_&lt;14/12/2014&gt;_|_&lt;1.1&gt;_|_&lt;Sessão 6 e 4&gt;_|_&lt;Yanko&gt;_|
+|_&lt;14/12/2014&gt;_|_&lt;1.2&gt;_|_&lt;Sessão 3&gt;_|_&lt;Diego&gt;_|
+|_&lt;12/12/2014&gt;_|_&lt;1.3&gt;_|_&lt;Sessão 2 e 5&gt;_|_&lt;Luiz&gt;_|
+|_&lt;12/12/2014&gt;_|_&lt;1.4&gt;_|_&lt;Descrição do documento&gt;_|_&lt;Victor&gt;_|
+|_&lt;15/12/2014&gt;_|_&lt;1.5&gt;_|_&lt;Correções e integração&gt;_|_&lt;Victor e Luiz&gt;_|
 
 
 1. Introdução
@@ -39,7 +43,6 @@ Este documento descreve toda a infra-estrutura utilizada durante o desenvolvimen
 
 1.4 Referências
 ---------------
-_[Esta subseção apresenta uma lista completa de todos os documentos mencionados no Plano de Gerenciamento de Configuração. Identifique os documentos por título, número de relatório (se aplicável), data e organização responsável pela publicação. Especifique as fontes a partir das quais as referências podem ser obtidas. Essas informações podem ser fornecidas por um anexo ou outro documento.]_
 
 Branching model: http://nvie.com/posts/a-successful-git-branching-model/
 
@@ -65,28 +68,20 @@ Branching model: http://nvie.com/posts/a-successful-git-branching-model/
 | 6         | Descrição do que será auditado e como serão reportados os problemas encontrados, assim como as suas soluções |
 
 
-
 2. Gerenciamento de Configuração de Software
 ============================================
 
 2.1 Organização, Responsabilidades e Interfaces
 ------------------------------------------------
-_[Descreva quem será o responsável pela execução das diversas atividades de Gerenciamento de Configuração (CM) descritas no Processo de CM.]_
 
-Gestor de configuração do projeto: Victor  
-Gestor de ferramentas de Gerência de configuração: Yanko  
+Gestor do Projeto: Victor  
+Gestor de Ferramentas de Gerência de Configuração: Yanko  
 Gestor de Configuração de Software: Victor, Yanko, Diego  
 Auditor de Configuração de Software: Luiz  
 Desenvolvedor: Diego, Luiz, Yanko  
 
 2.2 Ferramentas, Ambiente e Infra-estrutura
 -------------------------------------------
-_[Descreva o ambiente de computação e as ferramentas de software a serem utilizadas para desempenhar as funções de CM em todo o ciclo de vida do projeto ou produto._
-_Descreva as ferramentas e os procedimentos necessários utilizados para o controle de versão dos itens de configuração gerados no ciclo de vida do projeto ou produto._
-_As questões envolvidas na configuração do ambiente de CM incluem:_
-* _tamanho previsto dos dados do produto_
-* _distribuição da equipe do produto_
-* _localização física dos servidores e clientes]_
 
 Será usado como ferramenta de versionamento o GIT, uma ferramenta distribuida, então cada participante do projeto terá em sua estação de trabalho um repositório. Para facilitar a gerencia será desiginada uma máquina onde terá a última versão estável.
 Para o 'pull' dessa máquina de controle (máquina da última versão estável) deve ser feito só após passar pela ferramenta de integração continua (CruiseControl).  
@@ -117,16 +112,15 @@ DR                 documento de requisitos
 MAP                modelo de análise e projeto     
 
 ### 3.1.2 Itens de Configuração
-Um projeto de desenvolvimento de software produz os seguintes itens:  
 
-- Programas (código fonte, programas executáveis, bibliotecas de componentes,  etc.)  
-- Documentação (manuais do usuário, documento de requisitos, modelo de análise e projeto, etc.)  
-- Massas de dados (dados de teste e do projeto em geral).  
-
-Um item de configuração está sujeito a mudanças e essas devem obedecer às políticas  
-estabelecidas. Normalmente, um item de configuração é estabelecido para cada  
-pedaço de software que pode ser projetado, implementado e testado de forma Plano de Gerenciamento de Configuração independente. Documentos e massas de dados, entretanto, também são passíveis de ser considerados itens de configuração.  
-
+| Item de Configuração | Responsável | Inclusão em Baseline |
+|----------------------|-------------|----------------------|
+| Documento de Requisitos | Luiz, Yanko | Quando os requisitos forem definidos pelo cliente |
+| Documento de arquitetura do software | Diego, Victor | Quando for validado pelo gerente de projetos |
+| Cronograma | Victor | Quando for acordado o prazo juntamente com o cliente |
+| Código fonte | Diego, Luiz, Yanko | Quando os testes forem escritos e aprovados |
+| Documento de casos de testes | Diego, Luiz, Yanko | Quando os testes forem validados pelo cliente |
+| Manuais | Luiz, Yanko | Quando o manual for aprovado pelo cliente |
 
 ### 3.1.3 Baselines do Projeto
 
@@ -181,10 +175,8 @@ de Mudança nos registros realizados na Ferramenta de Gestão de Projetos.
 A Comissão de Controle de Mudanças  será formada pelo Líder de Projeto, integrantes da Equipe de Qualidade e integrantes da Equipe Técnica.
 
 
-
 4. Padrões e Procedimentos
 ==========================
-_[Descreva os padrões e procedimentos que devem ser seguidos no projeto. Crie subseções se achar necessário, para organizá-los melhor.]_
 
 Esse seção vai documentar os padrões usados na criação de branch's, Tag's, Commit's e no versionamento do projeto. Também será documentado o procedimento para a solicitação de mudança.
 
@@ -228,8 +220,9 @@ Um breve descrição de todas as ferramentas utilizadas do projeto:
 
 Com o objetivo de capacitar todos os participantes do projeto será feito um treinamento das ferramentas utilizadas. 
 
-GIT avançado: Victor  
-GIT intermediário: Diego, Luiz, Yanko  
+Microsoft Project: Victor
+GIT avançado: Yanko  
+GIT intermediário: Diego, Luiz, Victor  
 Bugzilla: Todos  
 CruiseControl: Yanko, Luiz  
 Sonar: Todos  
@@ -239,6 +232,5 @@ IDE Eclipse: Diego, Luiz, Yanko
 
 6. Auditorias de Configuração
 =============================
-_[Descreva o cronograma das auditorias de configuração e o que será verificado. Informe também como serão reportados os problemas encontrados e onde sera feito o acompanhamento dos itens corretivos.]_
 
 A verificação deve ocorrer a cada fim de interação e caso haja algum itens em desacordo com os padrões definidos no PGC serão reportados ao responsável para correção imediata.
