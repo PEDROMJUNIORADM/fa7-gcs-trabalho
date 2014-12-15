@@ -99,23 +99,56 @@ A ferramenta utilizada para auxiliar as mudanças será Bugzilla.
 ---------------------------------
 ### 3.1.1 Métodos de Identificação
 ----------------------------------
-_[Descreva como os artefatos do projeto ou produto devem ser nomeados, marcados e numerados. O esquema de identificação deve abranger o hardware, o software do sistema, os produtos de terceiros (COTS) e todos os artefatos de desenvolvimento de aplicativos listados na estrutura de diretórios do produto; por exemplo, planos, modelos, componentes, software de teste, resultados e dados, executáveis e assim por diante.]_
+Todos os documentos disponibilizados no repositório devem ser identificados baseados na seguinte nomenclatura:               
+ID ARTEFATO-NOME ARTEFATO                                                                                                    
+Onde:                                                                                                                        
+•	ID ARTEFATO é a sigla de identificação do artefato conforme lista abaixo                                                 
+•	NOME ARTEFATO é nome de identificação do artefato conforme lista abaixo.                                                 
+
+ID ARTEFATO    	|  NOME ARTEFATO                                                                                             
+BC                 bibliotecas de componentes                                                                                
+MU                 manuais do usuário                                                                                        
+CF                 código fonte                                                                                              
+PE                 programas executáveis                                                                                     
+DR                 documento de requisitos                                                                                   
+MAP                modelo de análise e projeto                                                                               
 
 ### 3.1.2 Itens de Configuração
-_[Relacionar os artefatos ou grupos de artefatos, separando por tipo, modulo ou subsistema, responsável ou momento em que deverão ser incluídos em baselines._
-* _“Inclusão em Baseline” em branco significa que o grupo de artefatos não participará de baseline. Pode ser expresso como uma data ou identificador de uma baseline, fase ou ponto de controle_
-* _“Responsável”: indicar nominalmente, sempre que possível]_
+Um projeto de desenvolvimento de software produz os seguintes itens:
 
-| Item (ou Tipo de Item)                 | Responsável na equipe	     | Inclusão em Baseline |
-|----------------------------------------|-----------------------------|----------------------|
-|_&lt;grupo de itens de configuração&gt;_|_&lt;nome do responsável&gt;_|_&lt;momento a partir do qual o conjunto de artefatos será incluído em baseline&gt;_|
+-Programas (código fonte, programas executáveis, bibliotecas de componentes,  etc.)                                          
+-Documentação (manuais do usuário, documento de requisitos, modelode análise e projeto, etc.)                                
+-Massas de dados (dados de teste e do projeto em geral).                                                                     
+
+Um item de configuração está sujeito a mudanças e essas devem obedecer às políticas
+estabelecidas. Normalmente, um item de configuração é estabelecido para cada
+pedaço de software que pode ser projetado, implementado e testado de forma Plano de Gerenciamento de Configuração independente. Documentos e massas de dados, entretanto, também são passíveis de ser considerados itens de configuração.
+
 
 
 ### 3.1.3 Baselines do Projeto
 
-_[As baselines funcionam como um padrão oficial no qual os trabalhos subseqüentes são baseados. Somente mudanças autorizadas podem ser efetuadas nas baselines._
-_Descreva em que pontos do ciclo de vida do projeto ou produto as baselines devem ser estabelecidas. As baselines mais comuns devem ser definidas ao final de cada uma das fases de Iniciação, Elaboração, Construção e Transição. Elas também podem ser geradas no final de iterações ocorridas dentro das várias fases ou com freqüência ainda maior._
-_Descreva quem autoriza uma baseline e o que ela contém.]_
+A criação de baselines pode ser realizada de acordo com os marcos do projeto ou de alguma outra forma definida pela gerência A baseline é armazenada em um repositório de itens de configuração. E, a partir desse momento, só pode ser alterado por meio de uma solicitação de alteração formal para controle de mudança.
+Para cada uma das fases do modelo sugere-se a criação de baselines nos seguintes marcos:                                     
+•	Fase Prospecção                                                                                                            
+o	Solicitação de uma proposta pelo cliente                                                                                   
+•	Fase Concepção                                                                                                             
+o	Após a atividade do ciclo de desenvolvimento: Conduzir revisão do Estudo de Viabilidade do Projeto                         
+•	Fase Negociação                                                                                                            
+o	Após a atividade do ciclo de desenvolvimento: Conduzir revisão do Contrato                                                 
+•	Fase Elaboração                                                                                                            
+o	Após a atividade do ciclo de desenvolvimento: Conduzir revisão do Arquitetura do Software                                  
+•	Fase Construção                                                                                                            
+o	Após a atividade do ciclo de desenvolvimento: Conduzir revisão do Capacidade Operacional                                   
+•	Fase Transição                                                                                                             
+o	Após a atividade do ciclo de desenvolvimento: Conduzir revisão do Entrega do Produto                                       
+
+
+A identificação da baseline pode ser constituída por:
+“Baseline” + “_” + ID do Projeto + “_” + (numeração sequencial iniciada por 0001)
+Sendo que:
+o	Os identificadores dos projetos (ID do Projeto) devem ser únicos na empresa, ou seja, nenhum projeto poderá apresentar o mesmo identificador. Sugere-se que o identificador seja composto pela sigla do projeto composta de 3 a 5 letras em maiúsculo.
+
 
 ### 3.1.4 Estrutura do Repositório de Versões
 _[Descreva a organização de diretórios do seu repositório e que itens/arquivos devem ser armazenados em cada diretório.]_
@@ -124,10 +157,14 @@ _[Descreva a organização de diretórios do seu repositório e que itens/arquiv
 --------------------------------------
 
 ### 3.2.1 Processamento e Aprovação de Solicitações de Mudança
-_[Descreva o processo pelo qual os problemas e as mudanças são submetidos, revisados e dispostos. Inclua como funciona a transição de estados de uma solicitação de mudança]_
+Para todas as mudanças,  o cadastro e controle serão realizados na Ferramenta de
+Gestão de Projetos.
+As liberações dos artefatos só acontecerão após a aprovação do Comitê de Avaliação 
+de Mudança nos registros realizados na Ferramenta de Gestão de Projetos.
+
 
 ### 3.2.2 Comitê de Controle de Mudança (CCB)
-_[Descreva a participação e os procedimentos para processar solicitações e aprovações de mudança a serem seguidos pelo CCB. Informe quem são os membros do CCB e suas responsabilidades.]_
+A Comissão de Controle de Mudanças  será formada pelo Líder de Projeto, integrantes da Equipe de Qualidade e integrantes da Equipe Técnica.
 
 
 
