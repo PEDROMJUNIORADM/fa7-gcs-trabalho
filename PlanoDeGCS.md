@@ -72,53 +72,26 @@ _As questões envolvidas na configuração do ambiente de CM incluem:_
 ---------------------------------
 ### 3.1.1 Métodos de Identificação
 ----------------------------------
-_[Descreva como os artefatos do projeto ou produto devem ser nomeados, marcados e numerados. O esquema de identificação deve abranger o hardware, o software do sistema, os produtos de terceiros (COTS) e todos os artefatos de desenvolvimento de aplicativos listados na estrutura de diretórios do produto; por exemplo, planos, modelos, componentes, software de teste, resultados e dados, executáveis e assim por diante.]_
+Todos os documentos disponibilizados no repositório devem ser identificados baseados na seguinte nomenclatura:               
+ID ARTEFATO-NOME ARTEFATO                                                                                                    
+Onde:                                                                                                                        
+•	ID ARTEFATO é a sigla de identificação do artefato conforme lista abaixo                                                 
+•	NOME ARTEFATO é nome de identificação do artefato conforme lista abaixo.                                                 
 
-
-Todos os documentos disponibilizados no repositório devem ser identificados baseados na seguinte nomenclatura:
-
-<ID_ARTEFATO> - <NOME_ARTEFATO>
-
-Onde:
-
-•	<ID_ARTEFATO> é a sigla de identificação do artefato conforme Tabela 6.
-•	<NOME_ARTEFATO> é nome de identificação do artefato conforme Tabela 6.
-
-ID_ARTEFATO	NOME_ARTEFATO
-APD 	Ativação de Projeto de Desenvolvimento
-EOR 	Especificação de Objetivos e Requisitos
-LPS 	Levantamento Preliminar do Software
-PCP 	Plano de Comunicação do Projeto
-PDS 	Plano de Desenvolvimento de Software
-PGC 	Plano de Gerência de Configuração
-PGQ 	Plano de Gerência da Qualidade
-PGR 	Plano de Gerência de Riscos
-RAC 	Relatório de Avaliação do Cliente
-RAP 	Relatório de Acompanhamento do Projeto
-PFM	Pedido Formal de Modificação
-SAI 	Solicitação de Análise de Impacto
-RTF 	Relatório de RTF (Revisão Técnica Formal)
-DAS	Documento de Análise de Software
-DPS	Documento de Projeto de Software
-
+ID ARTEFATO    	|  NOME ARTEFATO                                                                                             
+BC                 bibliotecas de componentes                                                                                
+MU                 manuais do usuário                                                                                        
+CF                 código fonte                                                                                              
+PE                 programas executáveis                                                                                     
+DR                 documento de requisitos                                                                                   
+MAP                modelo de análise e projeto                                                                               
 
 ### 3.1.2 Itens de Configuração
-_[Relacionar os artefatos ou grupos de artefatos, separando por tipo, modulo ou subsistema, responsável ou momento em que deverão ser incluídos em baselines._
-* _“Inclusão em Baseline” em branco significa que o grupo de artefatos não participará de baseline. Pode ser expresso como uma data ou identificador de uma baseline, fase ou ponto de controle_
-* _“Responsável”: indicar nominalmente, sempre que possível]_
-
-| Item (ou Tipo de Item)                 | Responsável na equipe	     | Inclusão em Baseline |
-|----------------------------------------|-----------------------------|----------------------|
-|_&lt;grupo de itens de configuração&gt;_|_&lt;nome do responsável&gt;_|_&lt;momento a partir do qual o conjunto de artefatos será incluído em baseline&gt;_|
-
-
 Um projeto de desenvolvimento de software produz os seguintes itens:
 
--Programas (código fonte, programas executáveis, bibliotecas de
-componentes,  etc.);
-- Documentação (manuais do usuário, documento de requisitos, modelo
-de análise e projeto, etc.);
-- Massas de dados (dados de teste e do projeto em geral).
+-Programas (código fonte, programas executáveis, bibliotecas de componentes,  etc.)                                          
+-Documentação (manuais do usuário, documento de requisitos, modelode análise e projeto, etc.)                                
+-Massas de dados (dados de teste e do projeto em geral).                                                                     
 
 Um item de configuração está sujeito a mudanças e essas devem obedecer às políticas
 estabelecidas. Normalmente, um item de configuração é estabelecido para cada
