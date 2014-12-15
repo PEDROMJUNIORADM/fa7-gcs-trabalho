@@ -54,6 +54,12 @@ _[Esta subseção descreve o conteúdo restante do Plano de Gerenciamento de Con
 ------------------------------------------------
 _[Descreva quem será o responsável pela execução das diversas atividades de Gerenciamento de Configuração (CM) descritas no Processo de CM.]_
 
+Gestor de configuração do projeto: Victor 
+Gestor de ferramentas de Gerência de configuração: Yanko
+Gestor de Configuração de Software: Victor, Yanko, Diego
+Auditor de Configuração de Software: Luiz
+Desenvolvedor: Diego, Luiz, Yanko
+
 2.2 Ferramentas, Ambiente e Infra-estrutura
 -------------------------------------------
 _[Descreva o ambiente de computação e as ferramentas de software a serem utilizadas para desempenhar as funções de CM em todo o ciclo de vida do projeto ou produto._
@@ -62,7 +68,12 @@ _As questões envolvidas na configuração do ambiente de CM incluem:_
 * _tamanho previsto dos dados do produto_
 * _distribuição da equipe do produto_
 * _localização física dos servidores e clientes]_
- 
+
+Será usado como ferramenta de versionamento o GIT, uma ferramenta distribuida, então cada participante do projeto terá em sua estação de trabalho um repositório. Para facilitar a gerencia será desiginada uma máquina onde terá a última versão estável.
+Para o 'pull' dessa máquina de controle (máquina da última versão estável) deve ser feito só após passar pela ferramenta de integração continua (CruiseControl).
+Cada máquina dos desenvolvedores deve ter instalado a mesma versão do Eclipse (Luna SR1) e a mesma versão do plugin EGit (3.4.1).
+O projeto deve está configurado para uso da ferramenta de inspeção continua SONAR.
+A ferramenta utilizada para auxiliar as mudanças será Bugzilla. 
 
 
 3. O Programa de Gerenciamento de Configuração
@@ -138,8 +149,24 @@ Para a criação de uma tag deverá seguir o seguinte padrão:
 
 5. Treinamento e Recursos
 =========================
-_[Descreva as ferramentas de software, o pessoal e o treinamento necessários para implementar as atividades de CM especificadas.]_
 
+Um breve descrição de todas as ferramentas utilizadas do projeto:
+Git é um sistema de controle de versão distribuído.
+Bugzilla é uma ferramenta baseada em Web e e-mail que dá suporte ao desenvolvimento de projetos, rastreando defeitos e servindo também como plataforma para pedidos de requisitos.
+CruiseControl é um ferramenta de integração continua e um extenso framework para criação e controle do processo de compilação continua.
+Eclipse é a IDE de desenvolvimento.
+Sonar é uma plataforma para melhorar a qualidade do software.
+Maven é uma ferramenta de automação de compilação utilizada primariamente em projetos Java.
+
+Com o objetivo de capacitar todos os participantes do projeto será feito um treinamento das ferramentas utilizadas. 
+
+GIT avançado: Victor
+GIT intermediário: Diego, Luiz, Yanko
+Bugzilla: Todos
+CruiseControl: Yanko, Luiz
+Sonar: Todos
+Maven: Todos
+IDE Eclipse: Diego, Luiz, Yanko
 
 
 6. Auditorias de Configuração
