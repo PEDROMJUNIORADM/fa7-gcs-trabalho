@@ -5,37 +5,36 @@ Plano de Gerenciamento de Configuração
 Versão &lt;1.0&gt;
 ------------------
 
-_[Observação: O template a seguir é fornecido para uso com o Rational Unified Process (RUP).  O texto exibido entre colchetes e em itálico foi incluído para orientar o autor e deve ser excluído antes da publicação do documento._
-
-_Este documento utiliza a formatação da linguagem [Markdown] (http://daringfireball.net/projects/markdown/). Você pode encontrar um guia de referência rápido [aqui] (https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).]_
-
 Histórico de Versões
 --------------------
 
 |Data                |Versão       |Descrição               |Autor          |
 |--------------------|-------------|------------------------|---------------|
-|_&lt;08/12/2014&gt;_|_&lt;1.0&gt;_|_&lt;Versão inicial&gt;_|_&lt;Victor&gt;_|
+|_&lt;12/12/2014&gt;_|_&lt;1.0&gt;_|_&lt;Versão inicial&gt;_|_&lt;Victor&gt;_|
 
 
 
 1. Introdução
 ==============
 
-_[A introdução do Plano de Gerenciamento de Configuração  oferece uma visão geral de todo o documento. 
-Ela inclui a finalidade, o escopo, as definições, os acrônimos, as abreviações, as referências e uma visão geral deste
-Plano de Gerenciamento de Configuração.]_
+Este Plano de Gerenciamento de Configuração estabelece e mantem a integridade dos artefatos gerados no projeto. Neste documento estão as atividades referentes ao gerenciamento de controle de configurações e mudanças que ocorrerão durante o desenvolvimento e manutenção do sistema, mantem a integridade dos artefados gerados e permite o acompanhamento através de históricos de evolução dos artefatos.
+Rastreia as modificações nos itens de configuração ao longo do tempo, para auxiliar no controle das mudanças e na reproducibilidade do sistema.
 
 1.1 Finalidade
 ---------------
-_[Especifique a finalidade deste Plano de Gerenciamento de Configuração.]_
+A finalidade deste documento é organizar a evolução e mudanças deste projeto para manter o planejamento dos artefatos gerados, baseados nos padrões de nomenclatura, versionamento, oragnização do projeto (diretórios) e  responsabilidades (papéis de cada integrante).
+Este documento deve ser acessível a todos os envolvidos do desenvolvimento deste sistema.
 
 1.2 Escopo
 ----------
-_[Uma breve descrição do escopo deste Plano de Gerenciamento de Configuração; o modelo ao qual ele está associado e tudo o que é afetado ou influenciado por este documento.]_
+Este documento descreve toda a infra-estrutura utilizada durante o desenvolvimento do projeto, afetando diretamente no desenvolvimento, pois deverá seguir os padrões e a organização de trabalho estabelecidas neste plano.
+ 
 
 1.3 Definições, Acrônimos e Abreviações
 ---------------------------------------
-_[Esta subseção apresenta as definições de todos os termos, acrônimos e abreviações necessários para a correta interpretação do Plano de Gerenciamento de Configuração.  Essas informações podem ser fornecidas mediante referência ao Glossário do projeto.]_
+|Termo     |Significado                                   |
+|----------|----------------------------------------------|
+| Baseline | Um marco de uma versão, consolidada e estável, servindo de base para trabalhos futuros. |
 
 1.4 Referências
 ---------------
@@ -43,7 +42,24 @@ _[Esta subseção apresenta uma lista completa de todos os documentos mencionado
 
 1.5 Visão Geral
 ---------------
-_[Esta subseção descreve o conteúdo restante do Plano de Gerenciamento de Configuração e explica como o documento está organizado.]_
+###### Organização do documento:
+ 
+|Sessão     |Descrição                                   |
+|-----------|--------------------------------------------|
+| 2.1       | Descrição de quem será o responsável pela execução das diversas atividades de Gerenciamento de Configuração (CM) descritas no Processo de CM |
+| 2.2       | Descrição do ambiente de computação e as ferramentas de software a serem utilizadas para desempenhar as funções de CM em todo o ciclo de vida do projeto ou produto e as ferramentas e procedimentos necessários para o ciclo de vida do produto. |
+| 3.1.1     | Descrição do padrão de nomeação dos artefatos |
+| 3.1.2     | Relação detalhada dos artefatos do sistema |
+| 3.1.3     | Descrição das baselines do projeto |
+| 3.1.4     | Descrição da organização de diretórios e itens que devem ser armazenados |
+| 3.2.1     | Descrição do processo que define a alteração de mudança |
+| 3.2.2     | Definição dos participantes do CCB e descrição dos procedimentos que lidam com as solicitações e aprovações de mudanças |
+| 4         | Descrição dos padrões e procedimentos que devem ser seguidos no projeto |
+| 4.1.1     | Descrição do padrão para nomeação de branchs |
+| 4.1.2     | Descrição do padrão para nomeação de commits |
+| 4.1.3     | Descrição do padrão para nomeação de tags    |
+| 5         | Descrião dos recursos (ferramentas de software) e do treinamento |
+| 6         | Descrição do que será auditado e como serão reportados os problemas encontrados, assim como as suas soluções |
 
 
 
