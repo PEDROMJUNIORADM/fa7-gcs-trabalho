@@ -2,12 +2,8 @@ Aluguel de livros
 =================
 Plano de Gerenciamento de Configuração
 ======================================
-Versão &lt;1.0&gt;
+Versão &lt;1.5&gt;
 ------------------
-
-_[Observação: O template a seguir é fornecido para uso com o Rational Unified Process (RUP).  O texto exibido entre colchetes e em itálico foi incluído para orientar o autor e deve ser excluído antes da publicação do documento._
-
-_Este documento utiliza a formatação da linguagem [Markdown] (http://daringfireball.net/projects/markdown/). Você pode encontrar um guia de referência rápido [aqui] (https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).]_
 
 Histórico de Versões
 --------------------
@@ -15,36 +11,65 @@ Histórico de Versões
 |Data                |Versão       |Descrição               |Autor          |
 |--------------------|-------------|------------------------|---------------|
 |_&lt;08/12/2014&gt;_|_&lt;1.0&gt;_|_&lt;Versão inicial&gt;_|_&lt;Victor&gt;_|
-
+|_&lt;12/12/2014&gt;_|_&lt;1.1&gt;_|_&lt;Descrição do documento&gt;_|_&lt;Victor&gt;_|
+|_&lt;12/12/2014&gt;_|_&lt;1.2&gt;_|_&lt;Sessão 2 e 5&gt;_|_&lt;Luiz&gt;_|
+|_&lt;14/12/2014&gt;_|_&lt;1.3&gt;_|_&lt;Sessão 6 e 4&gt;_|_&lt;Yanko&gt;_|
+|_&lt;14/12/2014&gt;_|_&lt;1.4&gt;_|_&lt;Sessão 3&gt;_|_&lt;Diego&gt;_|
+|_&lt;15/12/2014&gt;_|_&lt;1.5&gt;_|_&lt;Correções e integração&gt;_|_&lt;Victor e Luiz&gt;_|
 
 
 1. Introdução
 ==============
 
-_[A introdução do Plano de Gerenciamento de Configuração  oferece uma visão geral de todo o documento. 
-Ela inclui a finalidade, o escopo, as definições, os acrônimos, as abreviações, as referências e uma visão geral deste
-Plano de Gerenciamento de Configuração.]_
+Este Plano de Gerenciamento de Configuração estabelece e mantem a integridade dos artefatos gerados no projeto. Neste documento estão as atividades referentes ao gerenciamento de controle de configurações e mudanças que ocorrerão durante o desenvolvimento e manutenção do sistema, mantem a integridade dos artefados gerados e permite o acompanhamento através de históricos de evolução dos artefatos.
+Rastreia as modificações nos itens de configuração ao longo do tempo, para auxiliar no controle das mudanças e na reproducibilidade do sistema.
 
 1.1 Finalidade
 ---------------
-_[Especifique a finalidade deste Plano de Gerenciamento de Configuração.]_
+A finalidade deste documento é organizar a evolução e mudanças deste projeto para manter o planejamento dos artefatos gerados, baseados nos padrões de nomenclatura, versionamento, oragnização do projeto (diretórios) e  responsabilidades (papéis de cada integrante).
+Este documento deve ser acessível a todos os envolvidos do desenvolvimento deste sistema.
 
 1.2 Escopo
 ----------
-_[Uma breve descrição do escopo deste Plano de Gerenciamento de Configuração; o modelo ao qual ele está associado e tudo o que é afetado ou influenciado por este documento.]_
+Este documento descreve toda a infra-estrutura utilizada durante o desenvolvimento do projeto, afetando diretamente no desenvolvimento, pois deverá seguir os padrões e a organização de trabalho estabelecidas neste plano.
+ 
 
 1.3 Definições, Acrônimos e Abreviações
 ---------------------------------------
-_[Esta subseção apresenta as definições de todos os termos, acrônimos e abreviações necessários para a correta interpretação do Plano de Gerenciamento de Configuração.  Essas informações podem ser fornecidas mediante referência ao Glossário do projeto.]_
+|Termo     |Significado |
+|----------|----------------------------------------------|
+| Baseline | Um marco de uma versão, consolidada e estável, servindo de base para trabalhos futuros. |
+| CCB      | Comitê de controle de mudanças. |
+| CM      | Gerência de configuração. |
+| UML      | Linguagem de Modelagem Unificada. |
+| PGC      | Plano de Gerenciamento de Configuração. |
+| IDE      | Ambiente integrado de desenvolvimento. |
 
 1.4 Referências
 ---------------
-_[Esta subseção apresenta uma lista completa de todos os documentos mencionados no Plano de Gerenciamento de Configuração. Identifique os documentos por título, número de relatório (se aplicável), data e organização responsável pela publicação. Especifique as fontes a partir das quais as referências podem ser obtidas. Essas informações podem ser fornecidas por um anexo ou outro documento.]_
+
+Branching model: http://nvie.com/posts/a-successful-git-branching-model/
 
 1.5 Visão Geral
 ---------------
-_[Esta subseção descreve o conteúdo restante do Plano de Gerenciamento de Configuração e explica como o documento está organizado.]_
-
+###### Organização do documento:
+ 
+|Sessão     |Descrição |
+|-----------|--------------------------------------------|
+| 2.1       | Descrição de quem será o responsável pela execução das diversas atividades de Gerenciamento de Configuração (CM) descritas no Processo de CM |
+| 2.2       | Descrição do ambiente de computação e as ferramentas de software a serem utilizadas para desempenhar as funções de CM em todo o ciclo de vida do projeto ou produto e as ferramentas e procedimentos necessários para o ciclo de vida do produto. |
+| 3.1.1     | Descrição do padrão de nomeação dos artefatos |
+| 3.1.2     | Relação detalhada dos artefatos do sistema |
+| 3.1.3     | Descrição das baselines do projeto |
+| 3.1.4     | Descrição da organização de diretórios e itens que devem ser armazenados |
+| 3.2.1     | Descrição do processo que define a alteração de mudança |
+| 3.2.2     | Definição dos participantes do CCB e descrição dos procedimentos que lidam com as solicitações e aprovações de mudanças |
+| 4         | Descrição dos padrões e procedimentos que devem ser seguidos no projeto |
+| 4.1.1     | Descrição do padrão para nomeação de branchs |
+| 4.1.2     | Descrição do padrão para nomeação de commits |
+| 4.1.3     | Descrição do padrão para nomeação de tags    |
+| 5         | Descrião dos recursos (ferramentas de software) e do treinamento |
+| 6         | Descrição do que será auditado e como serão reportados os problemas encontrados, assim como as suas soluções |
 
 
 2. Gerenciamento de Configuração de Software
@@ -52,17 +77,21 @@ _[Esta subseção descreve o conteúdo restante do Plano de Gerenciamento de Con
 
 2.1 Organização, Responsabilidades e Interfaces
 ------------------------------------------------
-_[Descreva quem será o responsável pela execução das diversas atividades de Gerenciamento de Configuração (CM) descritas no Processo de CM.]_
+
+Gestor do Projeto: Victor  
+Gestor de Ferramentas de Gerência de Configuração: Yanko  
+Gestor de Configuração de Software: Victor, Yanko, Diego  
+Auditor de Configuração de Software: Luiz  
+Desenvolvedor: Diego, Luiz, Yanko  
 
 2.2 Ferramentas, Ambiente e Infra-estrutura
 -------------------------------------------
-_[Descreva o ambiente de computação e as ferramentas de software a serem utilizadas para desempenhar as funções de CM em todo o ciclo de vida do projeto ou produto._
-_Descreva as ferramentas e os procedimentos necessários utilizados para o controle de versão dos itens de configuração gerados no ciclo de vida do projeto ou produto._
-_As questões envolvidas na configuração do ambiente de CM incluem:_
-* _tamanho previsto dos dados do produto_
-* _distribuição da equipe do produto_
-* _localização física dos servidores e clientes]_
- 
+
+Será usado como ferramenta de versionamento o GIT, uma ferramenta distribuida, então cada participante do projeto terá em sua estação de trabalho um repositório. Para facilitar a gerencia será desiginada uma máquina onde terá a última versão estável.
+Para o 'pull' dessa máquina de controle (máquina da última versão estável) deve ser feito só após passar pela ferramenta de integração continua (CruiseControl).  
+Cada máquina dos desenvolvedores deve ter instalado a mesma versão do Eclipse (Luna SR1) e a mesma versão do plugin EGit (3.4.1).
+O projeto deve está configurado para uso da ferramenta de inspeção continua SONAR.
+A ferramenta utilizada para auxiliar as mudanças será Bugzilla. 
 
 
 3. O Programa de Gerenciamento de Configuração
@@ -72,50 +101,138 @@ _As questões envolvidas na configuração do ambiente de CM incluem:_
 ---------------------------------
 ### 3.1.1 Métodos de Identificação
 ----------------------------------
-_[Descreva como os artefatos do projeto ou produto devem ser nomeados, marcados e numerados. O esquema de identificação deve abranger o hardware, o software do sistema, os produtos de terceiros (COTS) e todos os artefatos de desenvolvimento de aplicativos listados na estrutura de diretórios do produto; por exemplo, planos, modelos, componentes, software de teste, resultados e dados, executáveis e assim por diante.]_
+Todos os documentos disponibilizados no repositório devem ser identificados baseados na seguinte nomenclatura:               
+ID ARTEFATO-NOME ARTEFATO  
+Onde:             
+•	ID ARTEFATO é a sigla de identificação do artefato conforme lista abaixo
+•	NOME ARTEFATO é nome de identificação do artefato conforme lista abaixo.
+
+| ID ARTEFATO | NOME ARTEFATO |
+|-------------|---------------|
+| BC          |       bibliotecas de componentes  |
+| MU          |       manuais do usuário  |
+| CF          |       código fonte  |  
+| PE          |       programas executáveis  |
+| DR          |       documento de requisitos |
+| MAP         |       modelo de análise e projeto     |
 
 ### 3.1.2 Itens de Configuração
-_[Relacionar os artefatos ou grupos de artefatos, separando por tipo, modulo ou subsistema, responsável ou momento em que deverão ser incluídos em baselines._
-* _“Inclusão em Baseline” em branco significa que o grupo de artefatos não participará de baseline. Pode ser expresso como uma data ou identificador de uma baseline, fase ou ponto de controle_
-* _“Responsável”: indicar nominalmente, sempre que possível]_
 
-| Item (ou Tipo de Item)                 | Responsável na equipe	     | Inclusão em Baseline |
-|----------------------------------------|-----------------------------|----------------------|
-|_&lt;grupo de itens de configuração&gt;_|_&lt;nome do responsável&gt;_|_&lt;momento a partir do qual o conjunto de artefatos será incluído em baseline&gt;_|
-
+| Item de Configuração | Responsável | Inclusão em Baseline |
+|----------------------|-------------|----------------------|
+| Documento de Requisitos | Luiz, Yanko | Quando os requisitos forem definidos pelo cliente |
+| Documento de arquitetura do software | Diego, Victor | Quando for validado pelo gerente de projetos |
+| Cronograma | Victor | Quando for acordado o prazo juntamente com o cliente |
+| Código fonte | Diego, Luiz, Yanko | Quando os testes forem escritos e aprovados |
+| Documento de casos de testes | Diego, Luiz, Yanko | Quando os testes forem validados pelo cliente |
+| Manuais | Luiz, Yanko | Quando o manual for aprovado pelo cliente |
 
 ### 3.1.3 Baselines do Projeto
 
-_[As baselines funcionam como um padrão oficial no qual os trabalhos subseqüentes são baseados. Somente mudanças autorizadas podem ser efetuadas nas baselines._
-_Descreva em que pontos do ciclo de vida do projeto ou produto as baselines devem ser estabelecidas. As baselines mais comuns devem ser definidas ao final de cada uma das fases de Iniciação, Elaboração, Construção e Transição. Elas também podem ser geradas no final de iterações ocorridas dentro das várias fases ou com freqüência ainda maior._
-_Descreva quem autoriza uma baseline e o que ela contém.]_
+A criação de baselines pode ser realizada de acordo com os marcos do projeto ou de alguma outra forma definida pela gerência. A baseline é armazenada em um repositório de itens de configuração. E, a partir desse momento, só pode ser alterado por meio de uma solicitação de alteração formal para controle de mudança.
+Para cada uma das fases do modelo sugere-se a criação de baselines nos seguintes marcos:
+
+- Fase Prospecção: Solicitação de uma proposta pelo cliente
+- Fase Concepção: Conduzir revisão do Estudo de Viabilidade do Projeto
+-	Fase Negociação: Conduzir revisão do Contrato
+-	Fase Elaboração: Conduzir revisão do Arquitetura do Software
+- Fase Construção: Conduzir revisão da Capacidade Operacional
+-	Fase Transição: Conduzir revisão do Entrega do Produto
+
+
+| Responsável | Baseline                       | Conteúdo                     |
+|-------------|--------------------------------|------------------------------|
+| Victor      | Baseline da fase de Prospecção | Termo de abertura do projeto            |
+| Victor      | Baseline da fase de Consepção  | Cronogramas, Doc. Requisitos, Orçamento |
+| Victor      | Baseline da fase de Negociação | Contratos |
+| Victor      | Baseline da fase de Elaboração | Diagramas da UML. |
+| Victor      | Baseline da fase de Contrução  | Código fonte, Suites de testes, relatórios de atividades  |
+| Victor      | Baseline da fase de Transição  | Manuais, Doc. de Aceite |
+
+
+A identificação da baseline pode ser constituída por:
+“Baseline” + “_” + ID do Projeto + “_” + (numeração sequencial iniciada por 0001)
+Sendo que:
+o	Os identificadores dos projetos (ID do Projeto) devem ser únicos na empresa, ou seja, nenhum projeto poderá apresentar o mesmo identificador. Sugere-se que o identificador seja composto pela sigla do projeto composta de 3 a 5 letras em maiúsculo.
+
 
 ### 3.1.4 Estrutura do Repositório de Versões
-_[Descreva a organização de diretórios do seu repositório e que itens/arquivos devem ser armazenados em cada diretório.]_
+O repositório de versões são definidos três branches principais: master, stage e develop.
+
+O branch 'master' é o ramo principal, onde terá as versões estáveis e testadas.
+O branch 'stage' é o ramo de estágio intermediário, onde o código é testado em um ambiente idêntico ao de produção.
+O branch 'develop' é o ramo onde terá todas as mudanças realizadas que farão parte de uma release. Deste brach 'develop' irão surgir vários outros branchs, e estes serão responsáveis por novas funcionalidades.
+Os branchs de correções urgentes ('hotfix') são reparos realizados diretamente na versão que está em produção ('master').
+
+![alt text](http://www.twistsystems.com/media/cms_page_media/2013/1/14/gitflow-model.png "Git flow")
 
 3.2 Controle de Configuração e Mudança
 --------------------------------------
 
 ### 3.2.1 Processamento e Aprovação de Solicitações de Mudança
-_[Descreva o processo pelo qual os problemas e as mudanças são submetidos, revisados e dispostos. Inclua como funciona a transição de estados de uma solicitação de mudança]_
+Para todas as mudanças,  o cadastro e controle serão realizados na Ferramenta de
+Gestão de Projetos.
+As liberações dos artefatos só acontecerão após a aprovação do Comitê de Avaliação 
+de Mudança nos registros realizados na Ferramenta de Gestão de Projetos.
+
 
 ### 3.2.2 Comitê de Controle de Mudança (CCB)
-_[Descreva a participação e os procedimentos para processar solicitações e aprovações de mudança a serem seguidos pelo CCB. Informe quem são os membros do CCB e suas responsabilidades.]_
-
+A Comissão de Controle de Mudanças  será formada pelo Líder de Projeto, integrantes da Equipe de Qualidade e integrantes da Equipe Técnica.
 
 
 4. Padrões e Procedimentos
 ==========================
-_[Descreva os padrões e procedimentos que devem ser seguidos no projeto. Crie subseções se achar necessário, para organizá-los melhor.]_
 
+Esse seção vai documentar os padrões usados na criação de branch's, Tag's, Commit's e no versionamento do projeto. Também será documentado o procedimento para a solicitação de mudança.
+
+###4.1 Padrões
+
+######4.1.1 Branch
+
+Para a criação de novos branch's deve ser adotado a definição conforme ao item 3.1.4 (Git Flow)
+
+######4.1.2 Commit
+
+Para executar um commit é preciso seguir a seguinte padrão:  
+&lt;BRANCH&gt;&lt;VERSÃO DO SISTEMA&gt;&lt;ID DO REQUISITO IMPLEMENTADO&gt;&lt;COMENTARIO&gt;
+
+Onde o &lt;BRANCH&gt; identifica o branch, &lt;VERSÃO DO SISTEMA&gt; identidica a versão do sistema que esta sendo modificada, &lt;ID DO REQUISITO IMPLEMENTADO&gt; que mostra qual a funcionalidadeesta sendo implementada segundo o documento de requisitos e um comentário do commit
+
+######4.1.2 Tag
+
+Para a criação de uma tag deverá seguir o seguinte padrão:
+ v XX.YY.ZZ e sempre usar o atributo -m para comentar.
+
+- A 1ª e 2ª posições (XX) indicam o primeiro bloco da identificação da versão, e será modificado quando ocorrer a inclusão de um conjunto de novas funcionalidades homologadas pelo cliente.
+- A 3ª e 4ª posições (YY) indicam o segundo bloco da indicação da versão e será modificado quando ocorrer alteração em funcionalidades existentes. 
+- A 5ª e 6ª posições (ZZ) indicam o último bloco da identificação da versão e será modificado na correção de um erro em qualquer funcionalidade. 
 
 
 5. Treinamento e Recursos
 =========================
-_[Descreva as ferramentas de software, o pessoal e o treinamento necessários para implementar as atividades de CM especificadas.]_
 
+Um breve descrição de todas as ferramentas utilizadas do projeto:
+
+- Git é um sistema de controle de versão distribuído.
+- Bugzilla é uma ferramenta baseada em Web e e-mail que dá suporte ao desenvolvimento de projetos, rastreando defeitos e servindo também como plataforma para pedidos de requisitos.
+- CruiseControl é um ferramenta de integração continua e um extenso framework para criação e controle do processo de compilação continua.
+- Eclipse é a IDE de desenvolvimento.
+- Sonar é uma plataforma para melhorar a qualidade do software.
+- Maven é uma ferramenta de automação de compilação utilizada primariamente em projetos Java.
+
+Com o objetivo de capacitar todos os participantes do projeto será feito um treinamento das ferramentas utilizadas. 
+
+Microsoft Project: Victor  
+GIT avançado: Yanko  
+GIT intermediário: Diego, Luiz, Victor  
+Bugzilla: Todos  
+CruiseControl: Yanko, Luiz  
+Sonar: Todos  
+Maven: Todos  
+IDE Eclipse: Diego, Luiz, Yanko  
 
 
 6. Auditorias de Configuração
 =============================
-_[Descreva o cronograma das auditorias de configuração e o que será verificado. Informe também como serão reportados os problemas encontrados e onde sera feito o acompanhamento dos itens corretivos.]_
+
+A verificação deve ocorrer a cada fim de interação e caso haja algum itens em desacordo com os padrões definidos no PGC serão reportados ao responsável para correção imediata.
